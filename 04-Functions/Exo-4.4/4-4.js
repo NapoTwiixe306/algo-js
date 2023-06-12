@@ -1,3 +1,5 @@
+const readlineSync = require('readline-sync');
+
 /**
  * Calculates the average of an array of numbers.
  * @param {number[]} arr - An array of numbers.
@@ -42,13 +44,12 @@ function max(arr){
 function multiRand(n){
     const result = [];
     for (let i = 0; i < n; i++){
-        result.push(Math.floor(Math.random() * 10) + 1);
+        result.push(Math.floor(Math.random() * 10));
     }
     return result;
 }
 
 
-const readlineSync = require('readline-sync');
 let n = readlineSync.questionInt('Enter the number of random numbers to generate: ');
 let randomNumbers = multiRand(n);
 
